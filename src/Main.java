@@ -46,5 +46,10 @@ public class Main {
         //можно ее повторно не считать
         float midZatr=summ/30;
         System.out.println("Средняя сумма трат за месяц составила " +midZatr+" рублей");
+        //Задание 4
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i=reverseFullName.length-1;i>=0;i--){
+            System.out.print(reverseFullName[i]);
+        }
     }
 }
