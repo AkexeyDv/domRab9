@@ -19,12 +19,28 @@ public class Main {
     public static void task1()
     {
         int [] arr=generateRandomArray();
+        //Задание 1
         int summ=0;
         for(int elmArr:arr){
             summ+=elmArr;
 
         }
         System.out.println("Сумма трат за месяц составила "+summ+" рублей");
+        //Задание 2
+        int minZatr=arr[0];
+        int maxZatr=arr[0];
+        for(int elmArr:arr)
+        {
+            if(minZatr>=elmArr){
+                minZatr=elmArr;
+            }
+            if(maxZatr<=elmArr){
+                maxZatr=elmArr;
+            }
 
+
+        }
+        System.out.println("Минимальная сумма трат за день составила "+ minZatr+" рублей. " +
+                "Максимальная сумма трат за день составила "+maxZatr+" рублей");
     }
 }
