@@ -1,5 +1,55 @@
+import java.util.Arrays;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    public static void main(String[] args)
+    {task1();
+
+    }
+    // Объявить метод «сгенерироватьМассив»
+    public static int[] generateRandomArray()
+    {
+        java.util.Random random = new java.util.Random();
+        int[] arr = new int[30];
+        for (int i = 0; i < arr.length; i++)
+        {
+            arr[i] = random.nextInt(100_000) + 100_000;
+        }
+        return arr;
+    }
+    public static void task1()
+    {
+        int [] arr=generateRandomArray();
+        //Задание 1
+        int summ=0;
+        for(int elmArr:arr){
+            summ+=elmArr;
+
+        }
+        System.out.println("Сумма трат за месяц составила "+summ+" рублей");
+        //Задание 2
+        int minZatr=arr[0];
+        int maxZatr=arr[0];
+        for(int elmArr:arr)
+        {
+            if(minZatr>=elmArr){
+                minZatr=elmArr;
+            }
+            if(maxZatr<=elmArr){
+                maxZatr=elmArr;
+            }
+
+
+        }
+        System.out.println("Минимальная сумма трат за день составила "+ minZatr+" рублей. " +
+                "Максимальная сумма трат за день составила "+maxZatr+" рублей");
+        //Ввиду того, что сумма элементов считается выше, то
+        //можно ее повторно не считать
+        float midZatr=summ/30;
+        System.out.println("Средняя сумма трат за месяц составила " +midZatr+" рублей");
+        //Задание 4
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i=reverseFullName.length-1;i>=0;i--){
+            System.out.print(reverseFullName[i]);
+        }
     }
 }
